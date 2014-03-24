@@ -1,12 +1,12 @@
 # WordPress Comment Notify
 
-Notifies WordPress post/page author of comments posted. Works with standard WordPress comments as well as
+Notifies [WordPress](http://wordpress.org) post/page author of comments posted. Works with standard WordPress comments as well as
 when using [Disqus Comment System](http://wordpress.org/plugins/disqus-comment-system/).
 
 Operation is based on registering a function for the action/hook <kbd>wp_insert_comment</kbd>. In the hook
 function the <kbd>wp_mail</kbd> function is called.
 
-Tested with WP 3.8.1 and WP's Disqus plugin version 2.7.4.
+Tested with WP 3.8.1 and WP's [Disqus plugin](http://wordpress.org/plugins/disqus-comment-system/) version 2.74.
 
 ## Usage
 
