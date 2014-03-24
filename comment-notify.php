@@ -18,7 +18,6 @@ function notify_author_by_email($comment_id, $comment) {
     $oPost = get_post($oComment->comment_post_ID);
     $postAuthorID = $oPost->post_author;
     $oPostAuthor = get_user_by('id', $postAuthorID);
-    //file_put_contents('test.txt', $oPostAuthor->user_email . "\n" . 'Uusi kommentti sivulla: ' . $oPost->post_title . "\n". 'Nimimerkki ' . $oComment->comment_author . ' kirjoitti seuraavan kommentin sivulle ' . get_permalink($oPost->ID) . ":\n\n" . $oComment->comment_content . "\n" . 'From: info@opetus.tv');
     wp_mail(
         // email to
         $oPostAuthor->user_email,
