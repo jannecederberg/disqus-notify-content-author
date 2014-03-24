@@ -8,7 +8,7 @@ Author: Janne Cederberg
 Author URI: http://opetus.tv
 
 Copyright: Janne Cederberg
-License: GPL2+
+License: GPLv2+
 */
 
 add_action('wp_insert_comment', 'notify_author_by_email');
