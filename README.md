@@ -18,13 +18,14 @@ least up to version 2.74), then you won't get these notifications. Instead, only
 
 On [wpdailybits.com](http://wpdailybits.com) in a post dated Nov. 2010 [Damien](http://wpdailybits.com/blog/author/Damienoh)
 writes on [How to Make Disqus Notify the Post Author When a New Comment Is Posted?](http://wpdailybits.com/blog/notify-post-author-for-new-comment-disqus/45)
+
 Sure, this approach works BUT...
 
 You SHOULD NOT modify the Disqus Comment System plugin code to accomplish author notification. Why? Because it'll break your
 upgrade path! In other words, any time you update your Disqus plugin, you'll have to remember to re-apply your modification...
 
-And what if you manage multiple WP sites. There's a pretty much a 95.37% chance you'll forget to re-apply
-the change on at least one of those instances at least sometime...plus it's pretty annoying re-applying the change over and over again.
+And what if you manage multiple WP sites? There's a 95.37% chance you'll forget to re-apply
+the change on at least one of those WP instances at least sometime...plus it's pretty annoying re-applying the change over and over again.
 
 ## A more elegant solution
 
