@@ -16,12 +16,12 @@ least up to version 2.74), then you won't get these notifications. Instead, only
 
 ## Why not simply modify Disqus plugin code?
 
-For example on wpdailybits.com in a post dated Nov. 2010 a solution is presented encouraging people to "hack" the Disqus plugin
-code: [How to Make Disqus Notify the Post Author When a New Comment Is Posted?](http://wpdailybits.com/blog/notify-post-author-for-new-comment-disqus/45)
+On wpdailybits.com in a post dated Nov. 2010 you'll find a solution, but unfortunately a sub-optimal one:
+[How to Make Disqus Notify the Post Author When a New Comment Is Posted?](http://wpdailybits.com/blog/notify-post-author-for-new-comment-disqus/45)
 
-Sure, this approach works...BUT...
+Sure, the above approach works, thank you Damian for presenting it...BUT...
 
-You SHOULD NOT modify the Disqus Comment System plugin code to accomplish author notification. Why? Because it'll break your
+You *should not* modify the Disqus Comment System plugin code to accomplish author notification. Why? Because it'll break your
 upgrade path! In other words, any time you update your Disqus plugin, you'll have to remember to re-apply your modification...
 
 And what if you manage multiple WP sites? There's a 95.37% chance you'll forget to re-apply
@@ -39,7 +39,14 @@ Plugins page in WP and enable it.
 
 ## Disclaimer
 
-This plugin is provided as-is without any warranty. You will be using the plugin at your own responsibility/risk.
+This plugin is provided as-is without any warranty. In case you choose to use this plugin, you'll be doing so
+at your own risk. The plugin works flawlessly for me, but I won't guarantee that it'll work for you.
+
+## Credits
+
+Damien of [wpdailybits.com](http://wpdailybits.com) for giving me an idea of how to refine my approach to solving
+the problem and how to cut 10+ lines of code out of my original plugin by leveraging <kbd>wp_notify_postauthor</kbd>
+instead of re-creating the same functionality myself :)
 
 ## License
 
