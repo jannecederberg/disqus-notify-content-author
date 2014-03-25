@@ -2,7 +2,7 @@
 
 ## In a nutshell
 
-This [WordPress](http://wordpress.org/) plugin notifies post/page author of comments posted through the
+This WordPress plugin notifies post/page author of comments posted through the
 [Disqus Comment System](http://wordpress.org/plugins/disqus-comment-system/) plugin just like the regular WordPress
 comment notification functionality.
 
