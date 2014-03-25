@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Comment Notify
+Plugin Name: Disqus Author Notify
 Plugin URI: http://opetus.tv
-Description: Notify post/page author of posted comments by emailing to WP profile email address.
+Description: When using Disqus Comment System, notify post/page author of comments by email without hacking the Disqus plugin.
 Version: 1.0
 Author: Janne Cederberg
 Author URI: http://opetus.tv
@@ -11,10 +11,11 @@ Copyright: Janne Cederberg
 License: GPLv2+
 */
 
-add_action('wp_insert_comment', 'notify_author_by_email');
+add_action('wp_insert_comment', 'disqus_author_notify_by_email');
 
-function notify_author_by_email($comment_id, $comment) {
-    $oComment = get_comment($comment_id);
+function disqus_author_notify_by_email($comment_id, $comment) {
+    wp_notify_postauthor($comment_id);
+/*    $oComment = get_comment($comment_id);
     $oPost = get_post($oComment->comment_post_ID);
     $postAuthorID = (int) $oPost->post_author;
     $oPostAuthor = get_user_by('id', $postAuthorID);
@@ -34,4 +35,5 @@ function notify_author_by_email($comment_id, $comment) {
         // headers
         sprintf('From: %s', get_bloginfo('admin_email'))
     );
+ */
 }
