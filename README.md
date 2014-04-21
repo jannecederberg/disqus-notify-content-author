@@ -32,9 +32,12 @@ the change on at least one of those WP instances at least sometime...plus it's p
 Utilize WP's <kbd>wp_insert_comment</kbd> hook/action and the <kbd>wp_notify_postauthor</kbd> function as done in this plugin.
 See below for instructions.
 
-## Usage
+## Installation
 
-Git clone or simply copy the files into <kbd>wproot/wp-content/plugins/disqus-author-notify</kbd> and then go to the
+[Download the zip](https://github.com/jannecederberg/wp-disqus-author-notify/archive/master.zip) archive of this repository, then go to the
+**Plugins - Add New** page in WP, click **Upload** and select the downloaded ZIP file.
+
+Alternatively, Git clone or simply copy the files into <kbd>wproot/wp-content/plugins/disqus-author-notify</kbd> and then go to the
 Plugins page in WP and enable it.
 
 ## Disclaimer
