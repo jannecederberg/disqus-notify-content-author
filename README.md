@@ -8,7 +8,7 @@ comment notification functionality.
 
 Tested in March/April 2014 up to WP 3.9 and WP's [Disqus plugin](http://wordpress.org/plugins/disqus-comment-system/) version 2.74.
 
-## Background/problem
+## Background / Problem
 
 In WordPress settings you can define for WP to email the post/page author whenever a comment is posted on their content. However, if you're using the [Disqus Comment System](http://wordpress.org/plugins/disqus-comment-system/) plugin (at least up to version 2.74), then post/page authors won't receive comment notifications. Instead, only comment moderators (defined in [Disqus admin panel](https://disqus.com/admin/settings/moderation/)) will be notified.
 
