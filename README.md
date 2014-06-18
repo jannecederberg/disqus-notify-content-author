@@ -6,7 +6,7 @@ This WordPress plugin notifies post/page author of comments posted through the
 [Disqus Comment System](http://wordpress.org/plugins/disqus-comment-system/) plugin just like the regular WordPress
 comment notification functionality.
 
-Tested in March/April 2014 up to WP 3.9 and WP's [Disqus plugin](http://wordpress.org/plugins/disqus-comment-system/) version 2.74.
+Confirmed to work with WordPress 3.9 and [Disqus Comment System](http://wordpress.org/plugins/disqus-comment-system/) versions 2.74 and 2.75.
 
 ## Background / Problem
 
