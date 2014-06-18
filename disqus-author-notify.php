@@ -11,7 +11,7 @@ Copyright: Janne Cederberg
 License: GPLv2
 */
 
-function disqus_author_notify_by_email($comment_id, $comment) {
+function disqus_author_notify_by_email($comment_id, $comment = null) {
     wp_notify_postauthor($comment_id);
 }
 
