@@ -1,6 +1,5 @@
 === Disqus Notify Content Author ===
 Contributors: jcederberg
-Donate link: http://example.com/
 Tags: comments, disqus, notify, email
 Requires at least: 3.9
 Tested up to: 3.9.2
