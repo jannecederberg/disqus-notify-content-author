@@ -9,6 +9,8 @@
  * License: GPLv2
  */
 
+defined('ABSPATH') or die("See no evil, hear no evil, speak no evil");
+
 function disqus_notify_content_author($comment_id, $comment = null) {
     wp_notify_postauthor($comment_id);
 }
