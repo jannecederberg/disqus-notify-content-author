@@ -45,7 +45,7 @@ Utilize WP's <kbd>wp_insert_comment</kbd> hook/action and the <kbd>wp_notify_pos
 
 Install by searching for the plugin in WP's plugin interface and then install from there.
 
-Alternatively you may [download the zip](https://github.com/jannecederberg/wp-disqus-author-notify/archive/master.zip) archive of this repository, then go to the **Plugins - Add New** page in WP, click **Upload** and select the downloaded ZIP file.
+Alternatively you may [download the zip](https://github.com/jannecederberg/disqus-notify-content-author/archive/master.zip) archive of this repository, then go to the **Plugins - Add New** page in WP, click **Upload** and select the downloaded ZIP file.
 
 As a final option, you may use Git to clone the plugin files into <kbd>wproot/wp-content/plugins/disqus-author-notify</kbd> and then go to the Plugins page in WP and enable it.
 
