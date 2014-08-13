@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Disqus Notify Content Author
- * Plugin URI: https://github.com/jannecederberg/wp-disqus-author-notify
+ * Plugin URI: https://github.com/jannecederberg/disqus-notify-content-author
  * Description: When using Disqus Comment System, notify post/page author of comments by email without hacking the Disqus plugin.
  * Version: 1.0
  * Author: Janne Cederberg
