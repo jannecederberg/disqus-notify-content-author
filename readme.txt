@@ -1,8 +1,8 @@
 === Disqus Notify Content Author ===
 Contributors: jcederberg
 Donate link: not-implemented-yet
-Tags: comments, disqus, notify, email
-Requires at least: 3.9
+Tags: disqus, comment, comments, notify, notification, email, post, page, author
+Requires at least: 2.8
 Tested up to: 3.9.2
 Stable tag: 1.0
 License: GPLv2 or later
@@ -53,11 +53,13 @@ As a final option, you may use Git to clone the plugin files into <kbd>wproot/wp
 
 = Does the plugin work with WP versions prior to 3.9? =
 
-I haven't tested. In case you do, would you please report whether or not it does.
+I assume it will work with the same Wordpress versions as the Disqus Comment System, which is WP 2.8 and higher. Nevertheless, I have not tested support on all versions.
+
+If you come across a combo of WP+Disqus versions with which this plugin doesn't work, could you please report it, thank you :)
 
 = Does the plugin work with Disqus versions prior to 2.74? =
 
-Again, I haven't tested. Please report in case you try it :)
+I haven't tested. Please report in case you try it :)
 
 == Screenshots ==
 
