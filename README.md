@@ -1,6 +1,6 @@
 # Disqus Notify Content Author (WP plugin)
 
-You probably want to head over to the official <a href="http://wordpress.org/plugins/disqus-notify-content-author/" class="btn btn-primary">plugin page</a>!
+You probably want to <a href="http://wordpress.org/plugins/disqus-notify-content-author/" class="minibutton">head over to the plugin page</a>!
 
 ## Wanting to contribute?
 
