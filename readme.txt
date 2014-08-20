@@ -13,13 +13,10 @@ If using Disqus Comment System, the authors of posts/pages do not get notified o
 == Description ==
 
 = Purpose =
-To make your WordPress site **even more awesome** than it already is! :)
-
-= What kind of awesome? =
 This plugin notifies post/page author by email of comments posted through the
 [Disqus Comment System](http://wordpress.org/plugins/disqus-comment-system/) plugin. In other words, this plugin implements the same notification functionality that WP ships with out of the box but which is circumvented by using the Disqus Comment System.
 
-*[I want awesome, tell me how!](http://wordpress.org/plugins/disqus-notify-content-author/installation/)*
+*[I want to install it!](http://wordpress.org/plugins/disqus-notify-content-author/installation/)*
 
 = Works with =
 Confirmed to work with at least with Disqus Comment System versions 2.74-2.77.
