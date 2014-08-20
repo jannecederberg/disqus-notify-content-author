@@ -53,7 +53,7 @@ As a final option, especially if you maintain multiple sites, you may wish to us
 
 If you're admin on the Disqus account used for the site then yes you will, one from Disqus and another from WordPress. However, users who have authored content on your site but are not admins in the Disqus account will only receive one notification email (coming from WordPress).
 
-= Why will the notifications arrive immediately? =
+= Why won't the notifications arrive immediately? =
 
 There is a delay of a few minutes in notification delivery as notifications to post/page authors are emailed only after the Disqus system submits them back to your WP instance.
 
