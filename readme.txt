@@ -13,7 +13,7 @@ If using Disqus Comment System, the authors of posts/pages do not get notified o
 == Description ==
 
 = Purpose =
-The purpose of this plugin is to make your WordPress site **even more awesome** than it already is! :)
+To make your WordPress site **even more awesome** than it already is! :)
 
 = What kind of awesome? =
 This plugin notifies post/page author by email of comments posted through the
