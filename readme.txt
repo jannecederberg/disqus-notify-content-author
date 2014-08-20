@@ -8,13 +8,15 @@ Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-If using Disqus Comment System, the authors of posts/pages do not get notified of comments. This plugin fixes that.
+If using Disqus, the authors of posts/pages do not get notified of comments if they're not Disqus moderators. This plugin fixes that.
 
-== Description ==
+== Description == 
 
 = Purpose =
 This plugin notifies post/page author by email of comments posted through the
-[Disqus Comment System](http://wordpress.org/plugins/disqus-comment-system/) plugin. In other words, this plugin implements the same notification functionality that WP ships with out of the box but which is circumvented by using the Disqus Comment System.
+[Disqus Comment System](http://wordpress.org/plugins/disqus-comment-system/) plugin even if the author is not an admin of the Disqus account used for the site.
+
+In other words, this plugin implements the same notification functionality that WP ships with out of the box but which is circumvented by using the Disqus Comment System.
 
 *[I want to install it!](http://wordpress.org/plugins/disqus-notify-content-author/installation/)*
 
@@ -46,6 +48,10 @@ As a final option, especially if you maintain multiple sites, you may wish to us
 5. Enable the plugin
 
 == Frequently Asked Questions ==
+
+= I receive two notification emails for each comment =
+
+If you're admin on the Disqus account used for the site then yes you will, one from Disqus and another from WordPress. However, users who have authored content on your site but are not admins in the Disqus account will only receive one notification email (coming from WordPress).
 
 = Why will the notifications arrive immediately? =
 
