@@ -1,10 +1,10 @@
-=== Disqus Notify Content Author ===
+=== Disqus Notify Post/Page Author ===
 Contributors: jcederberg
 Donate link: not-implemented-yet
 Tags: disqus, comment, comments, notify, notification, email, post, page, author
 Requires at least: 2.8
 Tested up to: 3.9.2
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ If using Disqus Comment System, the authors of posts/pages do not get notified o
 This WordPress plugin notifies post/page author by email of comments posted through the
 [Disqus Comment System](http://wordpress.org/plugins/disqus-comment-system/) plugin. In other words the plugin implements the same notification functionality WP ships with out of the box but which is circumvented by using the Disqus Comment System without this plugin.
 
-Please notice that there is a delay in notification delivery as notifications are emailed to post/page authors after the Disqus system submits (over XMLRPC)
+Please notice that there is a delay of a few minutes in notification delivery as notifications to post/page authors are emailed only after the Disqus system submits them back to your WP instance.
 
 Confirmed to work with WordPress 3.9.x and [Disqus Comment System](http://wordpress.org/plugins/disqus-comment-system/) versions 2.74-2.77.
 
@@ -28,7 +28,7 @@ In WordPress settings you can define for WP to email the post/page author whenev
 = Why not simply modify Disqus plugin code? =
 
 On wpdailybits.com in a post dated Nov. 2010 you'll find a solution, but unfortunately a sub-optimal one:
-[How to Make Disqus Notify the Post Author When a New Comment Is Posted?](http://wpdailybits.com/blog/notify-post-author-for-new-comment-disqus/45)
+[How to Make Disqus Notify the Post Author When a New Comment Is Posted?](http://wpdailybits.com/blog/notify-post-author-for-new-comment-disqus/45).
 
 Sure, the above approach works, thank you Damian for presenting it...BUT...
 
@@ -67,10 +67,16 @@ This plugin does not add anything to the user interface and hence contains no sc
 
 == Changelog ==
 
+= 1.0.1 =
+* Rename plugin name from "Disqus Notify Content Author" to "Disqus Notify Post/Page Author"
+
 = 1.0 =
 * First public release on Wordpress.org
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+This is simply a change in the name of the plugin; if you already installed this plugin, there's no need to upgrade.
 
 = 1.0 =
 Initial public release. Nothing to upgrade.
