@@ -104,15 +104,13 @@ This is simply a change in the name of the plugin; if you already installed this
 = 1.0 =
 Initial public release. Nothing to upgrade.
 
-== Other Notes ==
-
-= Related articles =
+== Related articles ==
 These sites/blogs describe the same issue that this plugin solves. Using this plugin is simpler though and prevents you from shooting your own leg (by not doing custom hacks)
 
 * [WP Daily Bits](http://wpdailybits.com/blog/notify-post-author-for-new-comment-disqus/45)
 * [Cornflower Design](http://www.cornflowerdesign.co.uk/2011/11/disqus-notify-post-author/)
 
-= Contributers =
+== Contributers ==
 Contributers to the initial version of this plugin that was released in March 2014 on GitHub
 
 - [hmemcpy](https://github.com/hmemcpy) @ GitHub: Instructions for using .zip for installing into WP
