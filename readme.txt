@@ -23,20 +23,20 @@ Confirmed to work with at least with Disqus Comment System versions 2.74-2.77.
 
 == Installation ==
 
-= Through WordPress user interface =
+= Installation through WordPress user interface =
 
 1. (Log in to your WordPress site)
 2. In WP admin interface choose *Plugins* > *Add New* OR Navigate to *http://YOURSITE.com/wp-admin/plugin-install.php*
 3. In *Add New Plugin* interface search for: *[Disqus Notify Post Author](http://YOURSITE.com/wp-admin/plugin-install.php?tab=search&s=disqus+notify+post+author)*
 4. Install the plugin
 
-= By using a zip file =
+= Installation using a zip file =
 
 1. [Download the zip package](https://github.com/jannecederberg/disqus-notify-content-author/archive/master.zip) of this plugin from its GitHub repo
 2. Go to the *Plugins - Add New* page in WP
 3. Click *Upload* and select the downloaded ZIP file
 
-= By using git clone =
+= Installation using Git =
 As a final option, especially if you maintain multiple sites, you may wish to use Git to clone the plugin:
 
 1. Open an SSH connection to your WordPress server
