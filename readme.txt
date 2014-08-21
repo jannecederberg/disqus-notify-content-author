@@ -25,6 +25,8 @@ Confirmed to work with at least with Disqus Comment System versions 2.74-2.77.
 
 == Installation ==
 
+**Before installing, make sure you have the Disqus Comment System plugin installed AND that you have not disabled automatic comment syncing in the Disqus WP plugin's settings**
+
 = Installation through WordPress user interface =
 
 1. (Log in to your WordPress site)
