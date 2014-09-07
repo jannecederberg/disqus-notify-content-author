@@ -3,7 +3,7 @@ Contributors: jcederberg
 Donate link: not-implemented-yet
 Tags: disqus, comment, comments, notify, notification, email, post, page, author
 Requires at least: 2.8
-Tested up to: 3.9.2
+Tested up to: 4.0
 Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
