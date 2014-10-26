@@ -4,7 +4,7 @@ Donate link: not-implemented-yet
 Tags: disqus, comment, comments, notify, notification, email, post, page, author
 Requires at least: 2.8
 Tested up to: 4.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,9 @@ I haven't tested. Please report in case you try it :)
 This plugin does not add anything to the user interface and hence contains no screenshots.
 
 == Changelog ==
+
+= 1.0.2 (2014-09-07) =
+Bump "Tested up to" to Wordpress 4.0.
 
 = 1.0.1 (2014-08-20) =
 * Renamed the plugin from *Disqus Notify Content Author* to *Disqus Notify Post/Page Author*
