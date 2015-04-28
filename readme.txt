@@ -3,7 +3,7 @@ Contributors: jcederberg
 Donate link: not-implemented-yet
 Tags: disqus, comment, comments, notify, notification, email, post, page, author
 Requires at least: 2.8
-Tested up to: 4.2.1
+Tested up to: 4.2
 Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -93,7 +93,7 @@ This plugin does not add anything to the user interface and hence contains no sc
 == Changelog ==
 
 = 1.0.5 (2015-04-28) =
-Confirmed support up until WordPress 4.2.1 and Disqus 2.84.
+Confirmed support up until WordPress 4.2 and Disqus 2.84.
 
 = 1.0.4 (2014-12-22) =
 Confirmed support for WordPress 4.1 and Disqus 2.84.
