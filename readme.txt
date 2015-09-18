@@ -4,7 +4,7 @@ Donate link: not-implemented-yet
 Tags: disqus, comment, comments, notify, notification, email, post, page, author
 Requires at least: 2.8
 Tested up to: 4.3
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -93,6 +93,9 @@ I haven't tested. Please report in case you try it :)
 This plugin does not add anything to the user interface and hence contains no screenshots.
 
 == Changelog ==
+
+= 1.1.1 (2015-09-18) =
+Remove post type dependent notification triggering due to it not working correctly. Attempting to add it back later.
 
 = 1.1 (2015-09-18) =
 * Added possibility for users to opt-out of these notifications. This is useful for users who are also Disqus comment moderators; without opting out they will receive two notifications regarding comments posted on their own articles: one from Disqus due to moderator role and another from this plugin.
