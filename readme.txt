@@ -94,6 +94,17 @@ This plugin does not add anything to the user interface and hence contains no sc
 
 == Changelog ==
 
+= 1.2 (2015-09-20) =
+* Do not notify post author of their own comments.
+  - This relies on post author having the same email address in their WordPress user settings that they provided when commenting on their own post via Disqus.
+* Send notifications only on WordPress core post types of "post" and "page".
+  - An admin UI should be added later for configuring this.
+* Modify notification emails
+  - Up until now the standard WordPress notification email was used
+  - The drawback with this was that the links it included for viewing and monitoring the posted comment assumed WordPress was being used for primary comment handling.
+  - With Disqus in use however, the links on the WP standard notification email are incorrect.
+  - This update addresses that.
+
 = 1.1.1 (2015-09-18) =
 Remove post type dependent notification triggering due to it not working correctly. Attempting to add it back later.
 
