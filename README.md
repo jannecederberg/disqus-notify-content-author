@@ -6,12 +6,12 @@ In case you're using Disqus Comment System on your WordPress blog, you've lost t
 
 This plugin fixes that problem by notifying authors of comments to their posts/pages regardless of whether or not they are comment moderators on Disqus.
 
-## How to use this WordPress plugin
+## Using this WordPress plugin
 
-To use this plugin, search in your WordPress plugins installation for *disqus notify* (or simply go to this url: `<yourdomain>/wp-admin/plugin-install.php?tab=search&s=disqus+notify`.
+To use this plugin, search in your WordPress plugins installation for *disqus notify* (or simply go to this url: `<your-wp-site>/wp-admin/plugin-install.php?tab=search&s=disqus+notify` to install).
 
 Alternatively you can [head over to the WordPress.org page of this plugin](http://wordpress.org/plugins/disqus-notify-content-author/).
 
-## Contributing?
+## Contributing
 
 To contribute to this plugin, send pull requests here on GitHub.
