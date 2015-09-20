@@ -23,6 +23,7 @@ $DISQUS_NOTIFY_ON_POST_TYPES = array('post', 'page');
  * WordPress user meta key name to be used when storing notification opt-out info to DB
  */
 define('USER_META_KEY_NAME', 'dnca_dont_notify');
+define('DISQUS_MODERATE_URL', 'https://disqus.com/admin/moderate/#/approved/search/id:');
 
 
 /**
@@ -57,9 +58,8 @@ function _dnca__comment_dump($id, $comment_obj) {
  * @todo Make admin-configurable in WordPress UI
  */
 function _dnca__notify_on_post_type($type) {
-	//return in_array($type, $DISQUS_NOTIFY_ON_POST_TYPES);
-	// todo: fix this function, above didn't work for whatever reason!
-	return true;
+	global $DISQUS_NOTIFY_ON_POST_TYPES;
+	return in_array($type, $DISQUS_NOTIFY_ON_POST_TYPES);
 }
 
 
@@ -97,6 +97,39 @@ function _dnca__get_optout_checkbox_checked($userID) {
 
 
 /**
+ *
+ */
+function dnca__filter_notification_text($notify_msg, $comment_id) {
+	$comment_obj = get_comment($comment_id);
+	$type = $comment_obj->comment_type;
+	if ( $type == 'pingback' || $type == 'trackback' ) {
+		// Don't alter pingback and trackback notifications
+		return $notify_msg;
+	}
+	// $comment_obj->comment_agent is of the following format: Disqus/1.1(2.84):<disqus-comment-id>
+	$disqus_details = explode(':', $comment_obj->comment_agent);
+	if ( substr($disqus_details[0], 0, 6) != 'Disqus' ) {
+		// If comment was not via Disqus, don't modify it
+		return $notify_msg;
+	}
+	$disqus_id = $disqus_details[1];
+	// Alter aspects of the core WordPress comment notification email text
+	// defined in: https://core.trac.wordpress.org/browser/tags/4.3.1/src/wp-includes/pluggable.php#L1462
+	$notify_msg = str_replace('#comments', '#disqus_thread', $notify_msg);
+	$notify_msg = preg_replace('/#comment-[\d]+/', "#comment-$disqus_id", $notify_msg);
+	$notify_lines = explode("\r\n", $notify_msg);
+	foreach ($notify_lines as $key => $line) {
+		if ( strpos($line, 'comment.php?action=') > -1 ) {
+			unset($notify_lines[$key]);
+		}
+	}
+	$notify_lines[] = 'Administer this comment: ' . DISQUS_MODERATE_URL . $disqus_id;
+	$notify_msg = implode("\r\n", $notify_lines);
+	return $notify_msg;
+}
+
+
+/**
  * Used as a hook to add notification opt-out field into user profile editing
  *
  * @todo Add textdomain for i18n
@@ -116,6 +149,32 @@ function dnca__add_optout_field( $user ) {
 	</tr>
 	</table>
 <?php }
+
+
+/**
+ * @todo Finish creating an UI for admin to define which post types comment notifications are sent on
+ */
+function dnca__add_post_type_field() {
+	/*
+	<tr>
+		<tr>
+		<th>Post types on which comment notifications are sent</th>
+		<td>
+			<?php
+				// Get non-core post types
+				$types = get_post_types(array('public' => true), 'names');
+				// Prepend core post types (excluding attachment, revision)
+				foreach ($types as $value):
+			?>
+			<label for="dnca-post-type-<?php echo $value; ?>">
+				<input type="checkbox" name="dnca-post-type-<?php echo $value; ?>" id="dnca-post-type-<?php echo $value; ?>" value="<?php echo $value; ?>" />
+				<?php echo $value; ?>
+			</label>
+			<?php endforeach; ?>
+		</td>
+	</tr>
+	*/
+}
 
 
 /**
@@ -161,8 +220,15 @@ function dnca__main($comment_id, $comment_obj = null) {
 /**
  * Define hook functions
  */
-add_action('wp_insert_comment', 'dnca__main', 99, 2);
+
+// Comment insertion hook (main kickoff point of this plugin)
+add_action( 'wp_insert_comment', 'dnca__main', 99, 2 );
+
+// User profile UI and save hooks
 add_action( 'show_user_profile', 'dnca__add_optout_field' );
 add_action( 'edit_user_profile', 'dnca__add_optout_field' );
 add_action( 'personal_options_update', 'dnca__save_optout_field' );
 add_action( 'edit_user_profile_update', 'dnca__save_optout_field' );
+
+// Alter comment notification email text
+add_filter( 'comment_notification_text', 'dnca__filter_notification_text', 99, 2 );
