@@ -3,7 +3,7 @@
  * Plugin Name: Disqus Notify Post/Page Author
  * Plugin URI: http://wordpress.org/plugins/disqus-notify-content-author/
  * Description: When using Disqus Comment System, notify post/page author of comments by email without hacking the Disqus plugin.
- * Version: 1.1.1
+ * Version: 1.2
  * Author: Janne Cederberg
  * Author URI: http://opetus.tv
  * License: GPLv2
@@ -73,6 +73,21 @@ function _dnca__author_opts_out($userID) {
 
 
 /**
+ *
+ */
+function _dnca__author_commented_on_own_post($post_author_id, $comment_obj) {
+	$post_author_obj = get_userdata($post_author_id);
+	if ( $post_author_obj === false ) {
+		return false;
+	}
+	// Matches if author of the post comments on their own post AND
+	// has the same email address defined in their WP profile settings
+	// as they provided (via social login or otherwise) when commenting via Disqus.
+	return ( $post_author_obj->user_email == $comment_obj->comment_author_email );
+}
+
+
+/**
  * Prints out the checked string needed for a checked HTML checkbox
  */
 function _dnca__get_optout_checkbox_checked($userID) {
@@ -95,7 +110,7 @@ function dnca__add_optout_field( $user ) {
 		<td>
 			<label for="<?php echo USER_META_KEY_NAME; ?>">
 				<input type="checkbox" name="<?php echo USER_META_KEY_NAME; ?>" id="<?php echo USER_META_KEY_NAME; ?>" value="y" <?php _dnca__get_optout_checkbox_checked($user->ID); ?> />
-				<?php _e('Do not notify me of comments to my posts/pages', 'dnca__main'); ?>
+				<?php _e('Do not notify me of comments to my posts/pages<br>(Even without selecting this, you will not be notified of your own comments to your own posts, assuming you defined the same email address here and when commenting)', 'dnca__main'); ?>
 			</label>
 		</td>
 	</tr>
@@ -113,7 +128,7 @@ function dnca__save_optout_field( $user_id ) {
 	// WordPress will delete meta value if it's set to zero.
 	// To avoid deleting and creating DB records, we'll use "y" (yes) and "n" (no)
 	$value = (isset($_POST[USER_META_KEY_NAME]) && $_POST[USER_META_KEY_NAME] === 'y') ? 'y' : 'n';
-	update_usermeta( $user_id, USER_META_KEY_NAME, $value);
+	update_user_meta( $user_id, USER_META_KEY_NAME, $value);
 }
 
 
@@ -133,12 +148,13 @@ function dnca__main($comment_id, $comment_obj = null) {
 	// Following is only for debugging:
 	//_dnca__comment_dump($comment_id, $comment_obj);
 
-	if ( _dnca__is_not_spam($comment_obj) ) {
-		if ( _dnca__notify_on_post_type($post_obj->post_type) ) {
-			if ( !_dnca__author_opts_out($post_author_id) ) {
-				wp_notify_postauthor($comment_id);
-			}
-		}
+	$not_spam = _dnca__is_not_spam($comment_obj);
+	$notify_on_type = _dnca__notify_on_post_type($post_obj->post_type);
+	$opt_in = !_dnca__author_opts_out($post_author_id);
+	$not_own_post = !_dnca__author_commented_on_own_post($post_author_id, $comment_obj);
+
+	if ( $not_spam && $notify_on_type && $opt_in && $not_own_post ) {
+		wp_notify_postauthor($comment_id);
 	}
 }
 
