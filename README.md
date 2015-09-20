@@ -8,7 +8,7 @@ This plugin fixes that problem by notifying authors of comments to their posts/p
 
 ## Using this WordPress plugin
 
-To use this plugin, search in your WordPress plugins installation for *disqus notify* (or simply go to this url: `<your-wp-site>/wp-admin/plugin-install.php?tab=search&s=disqus+notify` to install).
+To use this plugin, search in your WordPress plugins installation for *disqus notify* (or simply go to this url: `<your-wp-site>/wp-admin/plugin-install.php?tab=search&s=disqus+notify`) and simply install it.
 
 Alternatively you can [head over to the WordPress.org page of this plugin](http://wordpress.org/plugins/disqus-notify-content-author/).
 
