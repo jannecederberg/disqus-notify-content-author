@@ -106,7 +106,7 @@ This plugin does not add anything to the user interface and hence contains no sc
   - This update addresses that.
 
 = 1.1.1 (2015-09-18) =
-Remove post type dependent notification triggering due to it not working correctly. Attempting to add it back later.
+Remove post type dependent notification triggering due to it not working correctly. Adding it back in v1.2.
 
 = 1.1 (2015-09-18) =
 * Added possibility for users to opt-out of these notifications. This is useful for users who are also Disqus comment moderators; without opting out they will receive two notifications regarding comments posted on their own articles: one from Disqus due to moderator role and another from this plugin.
