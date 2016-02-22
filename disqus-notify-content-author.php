@@ -3,9 +3,9 @@
  * Plugin Name: Disqus Notify Post/Page Author
  * Plugin URI: http://wordpress.org/plugins/disqus-notify-content-author/
  * Description: When using Disqus Comment System, notify post/page author of comments by email without hacking the Disqus plugin.
- * Version: 1.2
+ * Version: 1.2.1
  * Author: Janne Cederberg
- * Author URI: http://opetus.tv
+ * Author URI: http://jannecederberg.fi
  * License: GPLv2
  */
 
@@ -139,12 +139,13 @@ function dnca__add_optout_field( $user ) {
 	<h3><?php _e('Disqus Notify Post/Page Author', 'dnca__main'); ?></h3>
 	<table class="form-table">
 	<tr>
-		<th><?php _e('Don\'t notify of comments', 'dnca__main'); ?></th>
+		<th><?php _e('Don\'t notify me on comments', 'dnca__main'); ?></th>
 		<td>
 			<label for="<?php echo USER_META_KEY_NAME; ?>">
 				<input type="checkbox" name="<?php echo USER_META_KEY_NAME; ?>" id="<?php echo USER_META_KEY_NAME; ?>" value="y" <?php _dnca__get_optout_checkbox_checked($user->ID); ?> />
-				<?php _e('Do not notify me of comments to my posts/pages<br>(Even without selecting this, you will not be notified of your own comments to your own posts, assuming you defined the same email address here and when commenting)', 'dnca__main'); ?>
+				<?php _e('Do not notify me of comments to my posts/pages', 'dnca__main'); ?>
 			</label>
+			<p class="description"><?php _e('This is useful for example if you are a Disqus moderator relating to the same comments. Even without selecting this, you will not be notified of your own comments to your own posts, assuming you defined the same email address here and when commenting.', 'dnca__main'); ?></p>
 		</td>
 	</tr>
 	</table>
