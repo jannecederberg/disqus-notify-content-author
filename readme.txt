@@ -95,7 +95,7 @@ I haven't tested. Please report in case you try it :)
 == Changelog ==
 
 = 1.2.1 (2016-02-23) =
-* Comfirm support for WordPress 4.4
+* Confirm support for WordPress 4.4
 * Improve wording on the user profile view where each user gets to opt-out of the notification emails.
 * Add screenshot of user profile view where user can opt-opt of receiving notification emails.
 * Mark Brandon Kraft ([kraftbj](https://wordpress.org/support/profile/kraftbj)) as [contributor](https://wordpress.org/support/topic/check-spam-status)
