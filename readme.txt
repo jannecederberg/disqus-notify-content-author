@@ -1,10 +1,10 @@
 === Disqus Notify Post/Page Author ===
-Contributors: jcederberg
+Contributors: jcederberg, kraftbj
 Donate link: not-implemented-yet
 Tags: disqus, comment, comments, notify, notification, email, post, page, author
 Requires at least: 2.8
-Tested up to: 4.3
-Stable tag: 1.2
+Tested up to: 4.4
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,9 +90,15 @@ I haven't tested. Please report in case you try it :)
 
 == Screenshots ==
 
-This plugin does not add anything to the user interface and hence contains no screenshots.
+1. Notification opt-out in user profile settings is by default not selected. The per-user notification opt-out is useful especially for those users who are Disqus admins to avoid double-notifications.
 
 == Changelog ==
+
+= 1.2.1 (2016-02-23) =
+* Comfirm support for WordPress 4.4
+* Improve wording on the user profile view where each user gets to opt-out of the notification emails.
+* Add screenshot of user profile view where user can opt-opt of receiving notification emails.
+* Mark Brandon Kraft ([kraftbj](https://wordpress.org/support/profile/kraftbj)) as [contributor](https://wordpress.org/support/topic/check-spam-status)
 
 = 1.2 (2015-09-20) =
 * Do not notify post author of their own comments.
