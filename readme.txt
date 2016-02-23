@@ -90,7 +90,7 @@ I haven't tested. Please report in case you try it :)
 
 == Screenshots ==
 
-1. Notification opt-out in user profile settings is by default not selected. The per-user notification opt-out is useful especially for those users who are Disqus admins to avoid double-notifications.
+1. Notification opt-out in user profile settings is by default not selected. Activating this setting gives for example Disqus moderators a way to avoid double-notifications.
 
 == Changelog ==
 
